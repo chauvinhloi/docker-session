@@ -49,11 +49,11 @@ def predict_iris():
     pl = request.args.get('pl')
     pw = request.args.get('pw')
 
-    unseen = np.array([[sl, sw, pl, pw]])
+    unseen = np.array([[sl, sw, pl, pw]]).astype(np.float64)
     result = knn.predict(unseen)
 
     return 'Predicted result for observation ' + str(unseen) + ' is: ' + str(result)
 
 
 if __name__ == '__main__':
-    app.run()
+    app.run(host='0.0.0.0', port=5000)
