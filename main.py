@@ -21,7 +21,7 @@ def predict_iris():
     unseen = np.array([[sl, sw, pl, pw]])
     result = knn.predict(unseen)
 
-    return 'OK'
+    return 'Predicted result for observation ' + str(unseen) + ' is: ' + str(result)
 
 
 if __name__ == '__main__':
