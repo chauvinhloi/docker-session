@@ -9,4 +9,4 @@ with open('./model.pkl', 'rb') as model_pkl:
 unseen = np.array([[3.2, 1.1, 1.5, 2.1]])
 result = knn.predict(unseen)
 
-print('Predicted result for observation ' + str(unseen) + ' is: ', result)
+print('Predicted result for observation ' + str(unseen) + ' is: ' + result)
